@@ -12,19 +12,19 @@ track employee hours, and scheduling conflicts.
 
 ## Business Hours
 Can edit the hours the business is open
-[x] editable selection for hours
-[x] able showing the week
-[x] hours displayed next to table based off of business hours
+- [X] editable selection for hours
+- [X] able showing the week
+- [X] hours displayed next to table based off of business hours
 
 ### Shift
 
 Shift contains:
 
-[x] Start time
-[x] End time
-[x] Duration of shifts & duration of open business hours
-[x] Maximum employees per shift
-[x] Assigned employees
+- [x] Start time
+- [x] End time
+- [x] Duration of shifts & duration of open business hours
+- [x] Maximum employees per shift
+- [x] Assigned employees
 
 Duration is calculated from start and end times and recalculated
 whenever either time changes.
