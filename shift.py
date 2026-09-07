@@ -23,14 +23,21 @@ class shiftMake:
         else:
             print("not allowed")
 
-shift = shiftMake("04:00", "18:00", 3)
+    def removeEmp(self, employee):
+        if employee in self.empAssigned:
+            self.empAssigned.remove(employee)
+        else:
+            print("cannot remove")
 
-shift.shiftAssign("employee 1")
-shift.shiftAssign("employee 2")
-shift.shiftAssign("employee 3")
-shift.shiftAssign("employee 4")
+        
+# shift = shiftMake("04:00", "18:00", 3)
+
+# shift.shiftAssign("employee 1")
+# shift.shiftAssign("employee 2")
+# shift.shiftAssign("employee 3")
+# shift.shiftAssign("employee 4")
 
 
-print(shift.empAssigned)
+# print(shift.empAssigned)
 
-print(shift.duration)
+# print(shift.duration)

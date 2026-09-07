@@ -29,3 +29,5 @@ def update_hours():
 def home():
     return render_template("index.html", business_hours = business_hours)
 
+if __name__ == "__main__":
+    app.run(debug=True, port= 5001)
