@@ -1,3 +1,4 @@
+9/6/36
 Im confused on how to use obsidian for now
 
 

@@ -14,14 +14,18 @@ track employee hours, and scheduling conflicts.
 
 Shift contains:
 
-- Start time
-- End time
-- Duration
-- Maximum employees per shift
-- Assigned employees
+[x] Start time
+[x] End time
+[x] Duration
+[x] Maximum employees per shift
+[x] Assigned employees
 
 Duration is calculated from start and end times and recalculated
 whenever either time changes.
+
+notes:
+    base class is complete
+    -need to work on being able to remove employees after theyve been assigned
 
 ### Employee
 

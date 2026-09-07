@@ -4,9 +4,10 @@ class shiftMake:
     def __init__(self,start, end, capacity):
         self.start = start
         self.end = end
-        self.shiftduration()
         self.capacity = capacity
         self.empAssigned = []
+
+        self.shiftduration()
 
     def shiftduration(self):
         starttime = self.start
@@ -16,15 +17,20 @@ class shiftMake:
         duration = endtime - starttime
         self.duration = duration
 
-    def shiftCap(assigned, max):
-        self.capacity = max
-        self.empAssigned = []
+    def shiftAssign(self, assigned):
         if len(self.empAssigned) < self.capacity:
-            self.empAsssigned.append(assigned)
+            self.empAssigned.append(assigned)
         else:
             print("not allowed")
 
-shift = shiftMake("04:00", "18:00")
+shift = shiftMake("04:00", "18:00", 3)
 
+shift.shiftAssign("employee 1")
+shift.shiftAssign("employee 2")
+shift.shiftAssign("employee 3")
+shift.shiftAssign("employee 4")
+
+
+print(shift.empAssigned)
 
 print(shift.duration)
