@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Webpage</title>
+</head>
+<body>
+    <h1>Schedule Builder</h1>
+    <p>Open Buisness Hours</p>
+    <table>
+        {% for day, hours in business_hours.items() %}
+        <tr>
+            <td>{{ day }}</td>
+
+            <td>
+                <input type="time"
+                    class="business-time"
+                    data-day="{{ day }}"
+                    data-field="open"
+                    value="{{ hours['open'] }}">
+            </td>
+
+            <td>
+                <input type="time"
+                    class="business-time"
+                    data-day="{{ day }}"
+                    data-field="close"
+                    value="{{ hours['close'] }}">
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
