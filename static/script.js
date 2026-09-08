@@ -33,7 +33,6 @@ function addScheduleRow(hour) {
     const time = document.createElement("div");
     time.classList.add("schedule-time");
     time.textContent = hour;
-
     row.appendChild(time);
 
     for (let i = 0; i < 7; i++) {
@@ -81,18 +80,19 @@ console.log(closinghours);
 latehours = closinghours[closinghours.length - 1]
 console.log(latehours)
 
+//helper def
+const makemin = (timed) => 
+{
+    const hours = parseInt(timed.substring(0,2),10);
+    const minutes = parseInt(timed.substring(3,5),10);
+    return hours * 60 + minutes;
+};
+
+
 
 //used to find the gap inbetween a start and end time
-
 function timeConversion(constart, conend)
 {
-    const makemin = (timed) => 
-    {
-        const hours = parseInt(timed.substring(0,2),10);
-        const minutes = parseInt(timed.substring(3,5),10);
-        return hours * 60 + minutes;
-    };
-
     let starting = makemin(constart);
     let ending = makemin(conend);
     
@@ -104,6 +104,20 @@ function timeConversion(constart, conend)
     return `${pad(diffHours)}:${pad(remainingMins)}`;
 }
 
-complete = timeConversion(earlyhours, latehours)
-console.log(complete)
+//shows the difference by calling timeConversion and console logging it
+//complete = timeConversion(earlyhours, latehours)
+//console.log(complete)
+
+let beginning = makemin(earlyhours)
+const ending = makemin(latehours)
+
+while(beginning <= ending)
+{
+    const hourtime = Math.floor(beginning / 60)
+    const minutetime = (beginning % 60)
+    const pad2 = (num) => String(num).padStart(2, '0');
+    let showing = `${pad2(hourtime)}:${pad2(minutetime)}`
+    addScheduleRow(showing)
+    beginning += 60
+}
 

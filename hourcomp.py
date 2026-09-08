@@ -5,13 +5,13 @@ app = Flask(__name__)
 
 #create days with an open and close
 business_hours = {
-    "Monday": {"open": "00:00", "close": "00:00"},
-    "Tuesday": {"open": "00:00", "close": "00:00"},
-    "Wednesday": {"open": "00:00", "close": "00:00"},
-    "Thursday": {"open": "00:00", "close": "00:00"},
-    "Friday": {"open": "00:00", "close": "00:00"},
-    "Saturday": {"open": "00:00", "close": "00:00"},
-    "Sunday": {"open": "00:00", "close": "00:00"},
+    "Monday": {"open": "07:00", "close": "23:00"},
+    "Tuesday": {"open": "07:00", "close": "23:00"},
+    "Wednesday": {"open": "07:00", "close": "23:00"},
+    "Thursday": {"open": "07:00", "close": "23:00"},
+    "Friday": {"open": "07:00", "close": "21:00"},
+    "Saturday": {"open": "12:00", "close": "17:00"},
+    "Sunday": {"open": "12:00", "close": "17:00"},
 }
 
 @app.route("/update-hours", methods=["POST"])
