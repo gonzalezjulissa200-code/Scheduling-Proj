@@ -1,0 +1,1 @@
+Great so i have my table show up with the hours of the earliest and latest time open. I just realized if i change my actual hours on my website then it wont update the hours in real time so i might call an add event listener

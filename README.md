@@ -15,7 +15,7 @@ Can edit the hours the business is open
 - [X] editable selection for hours
 - [X] able showing the week
 - [X] hours displayed next to table based off of business hours
-
+note: hours now actually update to when hours are changed under "open business hours"
 ### Shift
 
 Shift contains:
