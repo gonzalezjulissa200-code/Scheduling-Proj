@@ -16,6 +16,7 @@ Can edit the hours the business is open
 - [X] able showing the week
 - [X] hours displayed next to table based off of business hours
 note: hours now actually update to when hours are changed under "open business hours"
+
 ### Shift
 
 Shift contains:
@@ -44,7 +45,7 @@ Employee contains:
 - Maximum allowed hours
 - Amount over maximum hours
 
-Employee information can be edited.
+Employee information should be able to be edited.
 
 ## Shift Assignment
 
@@ -77,3 +78,8 @@ than employees with larger overlaps.
   but the scheduler displays a warning.
 - Employee hours are calculated from their assigned shifts.
 - Changes to shifts automatically update calculated employee hours.
+
+
+## Other
+HTML has been edited to include an add shifts button, still needs to be connected to javascript and python code
+
