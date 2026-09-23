@@ -1,7 +1,8 @@
 #monday through sunday
 #from datetime import time
-from flask import Flask, request, render_template
-app = Flask(__name__)
+from flask import Blueprint, request, render_template
+
+business_bp = Blueprint("business", __name__)
 
 #create days with an open and close
 business_hours = {
@@ -14,7 +15,7 @@ business_hours = {
     "Sunday": {"open": "12:00", "close": "17:00"},
 }
 
-@app.route("/update-hours", methods=["POST"])
+@business_bp.route("/update-hours", methods=["POST"])
 def update_hours():
     data = request.get_json()
     day = data["day"]
@@ -25,9 +26,6 @@ def update_hours():
     print(business_hours[day])
     return {"status": "ok"}
 
-@app.route("/")
+@business_bp.route("/")
 def home():
     return render_template("index.html", business_hours = business_hours)
-
-if __name__ == "__main__":
-    app.run(debug=True, port= 5001)

@@ -31,8 +31,9 @@ Duration is calculated from start and end times and recalculated
 whenever either time changes.
 
 notes:
-    base class is complete
-    -need to work on being able to remove employees after theyve been assigned
+    - [x] base class is complete, can now add shifts through ui.
+    - need to work on being able to remove employees after theyve been assigned
+    - showing the schedules that have been added
 
 ### Employee
 

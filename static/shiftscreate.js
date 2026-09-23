@@ -19,14 +19,24 @@ createshift.addEventListener("click", function()
     {
         const field = shift[i].dataset.field
         const time = shift[i].value
+        const amount = shift[i].dataset.capacity
         console.log(field)
         console.log(time)
+        console.log(amount)
 
         newShift[field] = time;
     }
 
     console.log(newShift);
 
+    fetch("/create-shift", {
+        method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify(newShift)
+    });
 
 });
 
